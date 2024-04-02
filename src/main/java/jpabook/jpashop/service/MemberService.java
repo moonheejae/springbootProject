@@ -32,7 +32,7 @@ public class MemberService {
         List<Member> fineMembers = memberRepository.fineByName(member.getName());
 
         if( !fineMembers.isEmpty() ) {
-            throw new IllegalArgumentException("이미 존재하는 회원입니다.");
+            throw new IllegalStateException("이미 존재하는 회원입니다.");
         }
     }
 
